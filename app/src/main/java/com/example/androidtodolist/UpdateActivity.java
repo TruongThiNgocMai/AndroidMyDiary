@@ -29,6 +29,10 @@ public class UpdateActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_update);
 
+        editTitle = findViewById(R.id.edit_text_Title);
+        editContent = findViewById(R.id.edit_text_Content);
+        editDate = findViewById(R.id.edit_text_Date);
+
         @SuppressLint("WrongViewCast") Button btn = (Button) findViewById(R.id.btnBack);
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -38,9 +42,7 @@ public class UpdateActivity extends AppCompatActivity {
             }
         });
 
-        final Button btn_Add_Date = (Button) findViewById(R.id.btn_Date);
-
-        btn_Add_Date.setOnClickListener(new View.OnClickListener() {
+        editDate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 showDatePicker();
@@ -49,10 +51,6 @@ public class UpdateActivity extends AppCompatActivity {
 
         db = Room.databaseBuilder(getApplicationContext(),
                 AppDatabase.class, "database-name").build();
-
-        editTitle = findViewById(R.id.edit_text_Title);
-        editContent = findViewById(R.id.edit_text_Content);
-        editDate = findViewById(R.id.edit_text_Date);
 
         btnUpdate = findViewById(R.id.btn_Update);
 

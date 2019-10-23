@@ -9,41 +9,36 @@
 
     <LinearLayout
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
 
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@mipmap/ic_launcher_foreground"
-            />
+            android:background="@mipmap/ic_launcher_foreground" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="How do you feel today?"
+            android:text="Your Feeling \nToday?"
             android:textColor="#999900"
-            android:textSize="100px" />
+            android:textSize="80px" />
+
+        <Button
+            android:id="@+id/btn_ADD"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="1dp"
+            android:drawableLeft="@android:drawable/ic_input_add"
+            android:text="Add" />
 
     </LinearLayout>
 
-    <androidx.recyclerview.widget.RecyclerView
-    android:id="@+id/recyclerview_id"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:background="#EEF3E5" />
-
-    <Button
-        android:id="@+id/btn_ADD"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:drawableLeft="@android:drawable/ic_input_add"
-        android:text="Add" />
-
-
-    <ProgressBar
-        android:id="@+id/progress_Bar"
-        android:visibility="gone"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerview_id"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
 
 </LinearLayout>

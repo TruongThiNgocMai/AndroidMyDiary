@@ -28,6 +28,9 @@ public class AddDiaryActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add);
+        editTitle = findViewById(R.id.edit_text_Title);
+        editContent = findViewById(R.id.edit_text_Content);
+        editDate = findViewById(R.id.edit_text_Date);
 
         @SuppressLint("WrongViewCast") Button btn = (Button) findViewById(R.id.btnBack);
         btn.setOnClickListener(new View.OnClickListener() {
@@ -51,9 +54,7 @@ public class AddDiaryActivity extends AppCompatActivity {
             }
         });
 
-        final Button btn_Add_Date = (Button) findViewById(R.id.btn_Date);
-
-        btn_Add_Date.setOnClickListener(new View.OnClickListener() {
+        editDate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 showDatePicker();
@@ -61,13 +62,7 @@ public class AddDiaryActivity extends AppCompatActivity {
         });
     }
 
-
-
     public void addTask() {
-        editTitle = findViewById(R.id.edit_text_Title);
-        editContent = findViewById(R.id.edit_text_Content);
-        editDate = findViewById(R.id.edit_text_Date);
-
         taskTitle = editTitle.getText().toString();
         taskContent = editContent.getText().toString();
         taskDate = editDate.getText().toString();

@@ -46,32 +46,28 @@
         android:orientation="horizontal">
         <EditText
             android:id="@+id/edit_text_Date"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginTop="10dp"
             android:hint="Date"/>
 
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:text="Date"
-            android:id="@+id/btn_Date"/>
     </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="Back"
-            android:id="@+id/btnBack"/>
+    <Button
+        android:id="@+id/btn_Update"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginTop="28dp"
+        android:background="#ff668c"
+        android:text="Update"
+        android:textColor="#fff" />
 
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Update"
-            android:id="@+id/btn_Update"/>
-    </LinearLayout>
+    <Button
+        android:id="@+id/btnBack"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginTop="14dp"
+        android:background="#66ff66"
+        android:text="Back"
+        android:textColor="#fff" />
 </LinearLayout>

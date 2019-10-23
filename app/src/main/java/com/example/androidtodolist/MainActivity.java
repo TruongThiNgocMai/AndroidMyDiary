@@ -3,6 +3,7 @@ package com.example.androidtodolist;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.room.Room;
@@ -39,8 +40,9 @@ public class MainActivity extends AppCompatActivity implements DiaryAdapter.OnIt
 
         recyclerviewUser = findViewById(R.id.recyclerview_id);
         recyclerviewUser.setLayoutManager(new LinearLayoutManager((this)));
+        recyclerviewUser.addItemDecoration(new DividerItemDecoration(this, DividerItemDecoration.VERTICAL));
 
-        final Button btn_Add = (Button) findViewById(R.id.btn_ADD);
+        final Button btn_Add = findViewById(R.id.btn_ADD);
 
         btn_Add.setOnClickListener(new View.OnClickListener() {
             @Override

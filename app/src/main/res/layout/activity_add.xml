@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
@@ -14,8 +13,7 @@
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@mipmap/ic_launcher_foreground"
-            />
+            android:background="@mipmap/ic_launcher_foreground" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -31,49 +29,39 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:hint="Title"/>
+        android:hint="Title" />
 
     <EditText
         android:id="@+id/edit_text_Content"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:hint="Content"/>
+        android:hint="Content" />
 
-    <LinearLayout
+    <EditText
+        android:id="@+id/edit_text_Date"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="horizontal">
+        android:layout_marginTop="10dp"
+        android:focusable="false"
+        android:hint="Date" />
 
-        <EditText
-            android:id="@+id/edit_text_Date"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_marginTop="10dp"
-            android:hint="Date"/>
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:text="Date"
-            android:id="@+id/btn_Date"/>
+    <Button
+        android:id="@+id/btn_AddTask"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginTop="28dp"
+        android:background="#ff668c"
+        android:text="Save"
+        android:textColor="#fff" />
 
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="Back"
-            android:id="@+id/btnBack"/>
-
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Save"
-            android:id="@+id/btn_AddTask"/>
-    </LinearLayout>
+    <Button
+        android:id="@+id/btnBack"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginTop="14dp"
+        android:background="#66ff66"
+        android:text="Back"
+        android:textColor="#fff" />
 
 </LinearLayout>
