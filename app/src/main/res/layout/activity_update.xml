@@ -40,12 +40,23 @@
         android:layout_marginTop="10dp"
         android:hint="Content"/>
 
-    <EditText
-        android:id="@+id/edit_text_Date"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:hint="Date"/>
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+        <EditText
+            android:id="@+id/edit_text_Date"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:hint="Date"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Date"
+            android:id="@+id/btn_Date"/>
+    </LinearLayout>
 
     <LinearLayout
         android:layout_width="wrap_content"

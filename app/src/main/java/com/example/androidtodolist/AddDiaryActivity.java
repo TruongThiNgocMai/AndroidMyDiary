@@ -1,6 +1,7 @@
 package com.example.androidtodolist;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.ButtonBarLayout;
 import androidx.room.Room;
 
 import android.annotation.SuppressLint;
@@ -49,7 +50,18 @@ public class AddDiaryActivity extends AppCompatActivity {
                 finish();
             }
         });
+
+        final Button btn_Add_Date = (Button) findViewById(R.id.btn_Date);
+
+        btn_Add_Date.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                showDatePicker();
+            }
+        });
     }
+
+
 
     public void addTask() {
         editTitle = findViewById(R.id.edit_text_Title);
@@ -98,8 +110,8 @@ public class AddDiaryActivity extends AppCompatActivity {
         DatePickerDialog date = new DatePickerDialog(this , new DatePickerDialog.OnDateSetListener() {
             @Override
             public void onDateSet(DatePicker datePicker, int i, int i1, int i2) {
-                @SuppressLint("WrongViewCast") Button bt = findViewById(R.id.edit_text_Date);
-                bt.setText(i+" "+(i1+1)+" "+i2);
+                @SuppressLint("WrongViewCast") EditText editDate = findViewById(R.id.edit_text_Date);
+                editDate.setText(i+" "+(i1+1)+" "+i2);
             }
         }, 2019, 01, 01);
         date.show();
